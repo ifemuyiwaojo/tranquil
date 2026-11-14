@@ -1,0 +1,68 @@
+<!--
+title: CCSP RN supervisory visit | Tranquil, Inc.
+description: Secure RN supervisory visit and progress notes for CCSP clients.
+active: forms
+robots: noindex
+scripts: js/crypto.js js/key.js js/forms.js
+-->
+<div class="wrap page-intro">
+  <p class="eyebrow">Community Care Services Program · Personal support services</p>
+  <h1>RN supervisory visit and progress notes</h1>
+  <p class="lede">Document the visit, what was reported, how the client is progressing, the conversation with the care coordinator, and whether the service is doing what it should. Print a copy for the chart before you submit.</p>
+</div>
+<form class="secure-form wrap" data-form="supervisory-ccsp" data-title="CCSP RN supervisory visit and progress notes" data-staff="yes" data-blanks="yes" autocomplete="off">
+  <p class="print-only letterhead">Tranquil, Inc. · P.O. Box 2754, Kennesaw, GA 30156 · (678) 290-0070</p>
+  <p class="secure-note">Protected health information. A draft stays in this browser tab only.</p>
+  <fieldset class="panel" data-section="Client">
+    <legend>Client</legend>
+    <div class="fields">
+      <div data-field data-label="Name of client" class="wide"><label>Name of client <span class="req">Required</span><input name="client_name" required autocomplete="off"></label></div>
+      <div data-field data-label="Address of client" class="wide"><label>Address of client<input name="client_address" autocomplete="off"></label></div>
+      <div data-field data-label="Phone number"><label>Phone number<input name="client_phone" type="tel" autocomplete="off"></label></div>
+      <div data-field data-label="Allergies"><label>Allergies (if any)<input name="allergies" autocomplete="off"></label></div>
+      <div data-field data-label="Date of visit"><label>Date of visit <span class="req">Required</span><input name="visit_date" type="date" required></label></div>
+      <div data-field data-label="Time in"><label>Time in<input name="time_in" type="time"></label></div>
+      <div data-field data-label="Time out"><label>Time out<input name="time_out" type="time"></label></div>
+      <div data-field data-label="Caregiver present"><label>Caregiver present<input name="caregiver" autocomplete="off"></label></div>
+    </div>
+  </fieldset>
+  <fieldset class="panel" data-section="1. Supervisory visit">
+    <legend>1. Supervisory visit</legend>
+    <div data-field data-label="Supervisory visit findings"><label>Document the supervisory visit, including the date, time, and all discussions with the client and caregivers.<textarea name="visit_findings" rows="8"></textarea></label></div>
+  </fieldset>
+  <fieldset class="panel" data-section="2. Material reports">
+    <legend>2. Material reports</legend>
+    <div data-field data-label="Material reports"><label>Any material reports from or about the client that relate to the care being provided, including progress notes and problems reported by employees, communications with physicians or other health care providers, communication with family members or responsible parties, and similar items.<textarea name="reports" rows="8"></textarea></label></div>
+  </fieldset>
+  <fieldset class="panel" data-section="3. Condition, progress, and interventions">
+    <legend>3. Condition, progress, and interventions</legend>
+    <div data-field data-label="Condition, progress, and interventions"><label>Assessment of the client’s general condition, progress being made, problems encountered, and interventions by Tranquil staff. Include case references, reports, discussions with the care coordinator, and teaching with the client, representative, or family.<textarea name="progress" rows="8"></textarea></label></div>
+  </fieldset>
+  <fieldset class="panel" data-section="4. Care coordinator communication">
+    <legend>4. Care coordinator communication</legend>
+    <div data-field data-label="CCNF communication"><label>Communications between the RN supervisor and the care coordinator on the Community Care Notification Form (CCNF), including anything that would help the coordinator understand the client’s condition or special needs.<textarea name="ccnf" rows="6"></textarea></label></div>
+  </fieldset>
+  <fieldset class="panel" data-section="5. Appropriateness of service">
+    <legend>5. Appropriateness of service</legend>
+    <p class="hint">Is the service adequate, satisfactory, and effective?</p>
+    <div class="fields">
+      <div data-field data-kind="radio" data-label="Adequate"><span class="field-label">Adequate</span><label class="choice"><input type="radio" name="adequate" value="Yes"> Yes</label><label class="choice"><input type="radio" name="adequate" value="No"> No</label></div>
+      <div data-field data-kind="radio" data-label="Satisfactory"><span class="field-label">Satisfactory</span><label class="choice"><input type="radio" name="satisfactory" value="Yes"> Yes</label><label class="choice"><input type="radio" name="satisfactory" value="No"> No</label></div>
+      <div data-field data-kind="radio" data-label="Effective"><span class="field-label">Effective</span><label class="choice"><input type="radio" name="effective" value="Yes"> Yes</label><label class="choice"><input type="radio" name="effective" value="No"> No</label></div>
+      <div data-field data-label="Comments on the service" class="wide"><label>Comments<textarea name="appropriateness" rows="5"></textarea></label></div>
+    </div>
+  </fieldset>
+  <fieldset class="panel" data-section="RN signature">
+    <legend>RN signature</legend>
+    <div data-field data-kind="signature" data-label="RN signature and credential">
+      <div class="fields">
+        <label>RN name and credential <span class="req">Required</span><input data-sig-name name="rn_name" required autocomplete="off"></label>
+        <label>Date <span class="req">Required</span><input data-sig-date name="rn_sign_date" type="date" required></label>
+      </div>
+      <canvas aria-label="Signature"></canvas>
+      <button type="button" class="btn btn-ghost btn-sm" data-sig-clear>Clear signature</button>
+    </div>
+  </fieldset>
+  <div class="form-actions"><button type="button" class="btn btn-ghost" data-print>Print for the chart</button><button class="btn" type="submit">Encrypt and submit</button></div>
+  <div class="form-status" role="status" aria-live="polite"></div>
+</form>

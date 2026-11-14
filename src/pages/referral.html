@@ -1,0 +1,78 @@
+<!--
+title: Request care | Tranquil, Inc.
+description: Send a secure home-care referral to Tranquil, Inc. for CCSP, ICWP, SOURCE, insurance, or private pay.
+active: forms
+scripts: js/crypto.js js/key.js js/forms.js
+-->
+<div class="wrap page-intro">
+  <p class="eyebrow">Request care</p>
+  <h1>Tell us who needs help at home.</h1>
+  <p class="lede">Families and care coordinators use this same form. It is encrypted before it is sent. If this is an emergency, call 911.</p>
+</div>
+<form class="secure-form wrap" data-form="referral" data-title="Care referral" autocomplete="off">
+  <fieldset class="panel" data-section="Person making the request">
+    <legend>Person making the request</legend>
+    <div class="fields">
+      <div data-field data-kind="radio" data-label="I am" class="wide"><span class="field-label">I am</span>
+        <label class="choice"><input type="radio" name="role" value="Family member" required> Family member</label>
+        <label class="choice"><input type="radio" name="role" value="The client"> The client</label>
+        <label class="choice"><input type="radio" name="role" value="Care coordinator"> Care coordinator</label>
+        <label class="choice"><input type="radio" name="role" value="Hospital or clinic"> Hospital or clinic</label>
+        <label class="choice"><input type="radio" name="role" value="Other"> Other</label>
+      </div>
+      <div data-field data-label="Your name"><label>Your name <span class="req">Required</span><input name="referrer_name" required></label></div>
+      <div data-field data-label="Your phone"><label>Your phone <span class="req">Required</span><input name="referrer_phone" type="tel" required></label></div>
+      <div data-field data-label="Your email"><label>Your email<input name="referrer_email" type="email"></label></div>
+      <div data-field data-label="Organization"><label>Organization, if any<input name="organization"></label></div>
+    </div>
+  </fieldset>
+  <fieldset class="panel" data-section="Person who needs care">
+    <legend>Person who needs care</legend>
+    <div class="fields">
+      <div data-field data-label="Client name"><label>Client name <span class="req">Required</span><input name="client_name" required></label></div>
+      <div data-field data-label="Date of birth"><label>Date of birth<input name="client_dob" type="date"></label></div>
+      <div data-field data-label="Client phone"><label>Client phone<input name="client_phone" type="tel"></label></div>
+      <div data-field data-label="County"><label>County<select name="county"><option value="">Select</option><option>Fulton</option><option>DeKalb</option><option>Gwinnett</option><option>Cobb</option><option>Clayton</option><option>Coweta</option><option>Douglas</option><option>Fayette</option><option>Henry</option><option>Polk</option><option>Paulding</option><option>Cherokee</option><option>Bartow</option><option>Floyd</option><option>Carroll</option><option>Butts</option><option>Pike</option><option>Chattooga</option><option>Gordon</option><option>Other Georgia county</option></select></label></div>
+      <div data-field data-label="Address" class="wide"><label>Address<input name="address"></label></div>
+      <div data-field data-label="Preferred language"><label>Preferred language<input name="language" placeholder="English"></label></div>
+    </div>
+  </fieldset>
+  <fieldset class="panel" data-section="Program and services">
+    <legend>Program and services</legend>
+    <div class="fields">
+      <div data-field data-kind="checks" data-label="Program"><span class="field-label">Program</span><div class="choices">
+        <label class="choice"><input type="checkbox" name="program" value="CCSP"> CCSP</label>
+        <label class="choice"><input type="checkbox" name="program" value="SOURCE"> SOURCE</label>
+        <label class="choice"><input type="checkbox" name="program" value="ICWP"> ICWP</label>
+        <label class="choice"><input type="checkbox" name="program" value="CareSource"> CareSource</label>
+        <label class="choice"><input type="checkbox" name="program" value="Long-term care insurance"> Long-term care insurance</label>
+        <label class="choice"><input type="checkbox" name="program" value="Private pay"> Private pay</label>
+        <label class="choice"><input type="checkbox" name="program" value="Veterans benefits"> Veterans benefits</label>
+        <label class="choice"><input type="checkbox" name="program" value="Intellectual or developmental disability waiver"> Disability waiver</label>
+        <label class="choice"><input type="checkbox" name="program" value="Not sure"> Not sure</label>
+      </div></div>
+      <div data-field data-kind="checks" data-label="Help needed"><span class="field-label">Help needed</span><div class="choices">
+        <label class="choice"><input type="checkbox" name="help" value="Personal care"> Personal care</label>
+        <label class="choice"><input type="checkbox" name="help" value="Skilled nursing"> Skilled nursing</label>
+        <label class="choice"><input type="checkbox" name="help" value="Medication support"> Medication support</label>
+        <label class="choice"><input type="checkbox" name="help" value="Respite"> Respite</label>
+        <label class="choice"><input type="checkbox" name="help" value="Companion or sitter"> Companion or sitter</label>
+        <label class="choice"><input type="checkbox" name="help" value="Housekeeping and meals"> Housekeeping and meals</label>
+        <label class="choice"><input type="checkbox" name="help" value="Transportation"> Transportation</label>
+      </div></div>
+      <div data-field data-label="Schedule" class="wide"><label>Days, hours, and anything the caregiver should know<textarea name="schedule"></textarea></label></div>
+      <div data-field data-label="Physician"><label>Physician, if you want us to have the name<input name="physician"></label></div>
+      <div data-field data-kind="radio" data-label="How soon"><span class="field-label">How soon</span>
+        <label class="choice"><input type="radio" name="urgency" value="This week"> This week</label>
+        <label class="choice"><input type="radio" name="urgency" value="Within a month"> Within a month</label>
+        <label class="choice"><input type="radio" name="urgency" value="Planning ahead"> Planning ahead</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="panel" data-section="Permission">
+    <legend>Permission</legend>
+    <div data-field data-label="Permission to share this request"><label class="choice"><input type="checkbox" name="consent" value="I am allowed to share this information with Tranquil, Inc. so they can respond about care." required> <span>I am allowed to share this information with Tranquil, Inc. so they can respond about care.</span></label></div>
+  </fieldset>
+  <div class="form-actions"><button class="btn" type="submit">Encrypt and send</button></div>
+  <div class="form-status" role="status" aria-live="polite"></div>
+</form>

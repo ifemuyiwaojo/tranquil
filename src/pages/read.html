@@ -1,0 +1,35 @@
+<!--
+title: Open a secure submission | Tranquil, Inc.
+description: Open an encrypted Tranquil form on the office computer. The private key is never uploaded.
+active: forms
+robots: noindex
+scripts: js/crypto.js js/read.js
+-->
+<div class="wrap page-intro prose">
+  <p class="eyebrow">Office</p>
+  <h1>Open a secure submission</h1>
+  <p class="lede">The private key stays on this computer. This page decrypts the record here and does not send the key anywhere.</p>
+</div>
+<div class="wrap two">
+  <section class="panel">
+    <h2>1. Agency private key</h2>
+    <p>Choose <strong>secrets/tranquil-private.pem</strong> from the office computer that runs the website. Keep a backup of that file somewhere safe and offline. If it is lost, older submissions cannot be opened.</p>
+    <label>Private key file<input id="key-file" type="file" accept=".pem,text/plain"></label>
+    <p id="key-status" role="status">No key chosen yet.</p>
+    <button class="btn btn-ghost btn-sm" id="forget-key" type="button">Forget key</button>
+  </section>
+  <section class="panel">
+    <h2>2. Staff access for the inbox</h2>
+    <p>The code lets this browser list encrypted submissions. It does not decrypt them.</p>
+    <form id="staff-login">
+      <label>Staff access code<input name="code" type="password" autocomplete="current-password" required></label>
+      <button class="btn btn-sm" type="submit">Unlock the inbox</button>
+      <p id="login-msg" role="status"></p>
+    </form>
+    <button class="btn" id="load-inbox" type="button">Show waiting submissions</button>
+    <div id="inbox-list"></div>
+    <h2>Or open an email attachment</h2>
+    <label>Submission file<input id="pack-file" type="file" accept="application/json,.json"></label>
+  </section>
+</div>
+<div class="wrap" id="record"></div>

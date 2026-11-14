@@ -1,0 +1,45 @@
+<!--
+title: Contact Tranquil, Inc.
+description: Call, fax, or send a secure message to Tranquil, Inc. in Kennesaw, Georgia.
+active: contact
+scripts: js/crypto.js js/key.js js/forms.js
+-->
+<div class="wrap page-intro">
+  <p class="eyebrow">Contact</p>
+  <h1>Call, or send a secure message.</h1>
+  <p class="lede">If someone is in danger, call 911. This form is not an emergency line.</p>
+</div>
+<div class="wrap two">
+  <form class="secure-form panel" data-form="contact" data-title="General message" autocomplete="on">
+    <fieldset data-section="Message">
+      <legend>Message</legend>
+      <div class="fields">
+        <div data-field data-label="Your name"><label>Your name <span class="req">Required</span><input name="name" required autocomplete="name"></label></div>
+        <div data-field data-label="Phone"><label>Phone <span class="req">Required</span><input name="phone" type="tel" required autocomplete="tel"></label></div>
+        <div data-field data-label="Email" class="wide"><label>Email<input name="email" type="email" autocomplete="email"></label></div>
+        <div data-field data-kind="radio" data-label="I am" class="wide"><span class="field-label">I am</span>
+          <label class="choice"><input type="radio" name="who" value="A client" required> A client</label>
+          <label class="choice"><input type="radio" name="who" value="A family member"> A family member</label>
+          <label class="choice"><input type="radio" name="who" value="A case manager"> A case manager</label>
+          <label class="choice"><input type="radio" name="who" value="An applicant"> An applicant</label>
+          <label class="choice"><input type="radio" name="who" value="Someone else"> Someone else</label>
+        </div>
+        <div data-field data-label="Message" class="wide"><label>How can we help? <span class="req">Required</span><textarea name="message" required></textarea></label></div>
+      </div>
+    </fieldset>
+    <p class="hint">Please do not include a Social Security number or a full medical history in this short message. Use the care request for a referral.</p>
+    <div class="form-actions"><button class="btn" type="submit">Encrypt and send</button></div>
+    <div class="form-status" role="status" aria-live="polite"></div>
+  </form>
+  <aside class="panel">
+    <h2>Office</h2>
+    <ul class="contact-list">
+      <li><a href="tel:6782900070">(678) 290-0070</a></li>
+      <li><a href="tel:6784586610">(678) 458-6610</a></li>
+      <li>Fax (678) 290-0235</li>
+      <li><a href="mailto:tranquil2754@hotmail.com">tranquil2754@hotmail.com</a></li>
+      <li>P.O. Box 2754<br>Kennesaw, GA 30156</li>
+    </ul>
+    <p>For a new client, the <a href="/referral.html">care request</a> gives us what we need to call you back prepared.</p>
+  </aside>
+</div>

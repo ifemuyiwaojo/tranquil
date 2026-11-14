@@ -1,0 +1,13 @@
+{
+  "name": "tranquil-inc",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node tools/build-pages.mjs",
+    "test": "node tools/roundtrip.mjs"
+  }
+}

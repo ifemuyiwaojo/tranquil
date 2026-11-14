@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /read.html
+Disallow: /assessment.html
+Disallow: /supervisory.html
+Disallow: /api/
