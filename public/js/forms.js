@@ -27,7 +27,7 @@
     ctx.lineWidth = 2.2;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.strokeStyle = "#123f3c";
+    ctx.strokeStyle = "#0c2340";
     let drawing = false;
     let last = null;
     function point(event) {

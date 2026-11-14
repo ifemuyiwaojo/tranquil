@@ -75,7 +75,7 @@ for (const file of files) {
     meta[line.slice(0, index).trim()] = line.slice(index + 1).trim();
   }
   const body = source.slice(comment[0].length).trim().replaceAll("{{COUNTIES}}", countyHtml);
-  const assetVersion = "2";
+  const assetVersion = "3";
   const scripts = (meta.scripts || "").split(/\s+/).filter(Boolean).concat("js/site.js").map((src) => `<script src="/${src}?v=${assetVersion}"></script>`).join("");
   const robots = meta.robots ? `<meta name="robots" content="${meta.robots}">` : "";
   const html = `<!DOCTYPE html>
@@ -83,7 +83,7 @@ for (const file of files) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#123f3c">
+<meta name="theme-color" content="#0c2340">
 <title>${meta.title}</title>
 <meta name="description" content="${meta.description}">
 ${robots}
@@ -91,7 +91,7 @@ ${robots}
 <meta property="og:description" content="${meta.description}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/css/styles.css?v=2">
+<link rel="stylesheet" href="/css/styles.css?v=3">
 </head>
 <body>
 ${header(meta.active || "")}
