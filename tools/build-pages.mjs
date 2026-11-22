@@ -75,7 +75,7 @@ for (const file of files) {
     meta[line.slice(0, index).trim()] = line.slice(index + 1).trim();
   }
   const body = source.slice(comment[0].length).trim().replaceAll("{{COUNTIES}}", countyHtml);
-  const assetVersion = "3";
+  const assetVersion = "6";
   const scripts = (meta.scripts || "").split(/\s+/).filter(Boolean).concat("js/site.js").map((src) => `<script src="/${src}?v=${assetVersion}"></script>`).join("");
   const robots = meta.robots ? `<meta name="robots" content="${meta.robots}">` : "";
   const html = `<!DOCTYPE html>

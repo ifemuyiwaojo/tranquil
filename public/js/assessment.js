@@ -283,8 +283,8 @@
       root.innerHTML = '<div class="page-intro"><p class="eyebrow">Clinical staff</p><h1>Nursing assessments</h1><p class="lede">Choose the form that matches the waiver and the visit. CCSP supervisory visits have their own note.</p></div><div class="card-grid">' +
         '<a class="card" href="/assessment.html?program=ccsp&visit=initial"><h2>CCSP initial</h2><p>First nursing assessment for Community Care Services Program personal support.</p></a>' +
         '<a class="card" href="/assessment.html?program=icwp&visit=initial"><h2>ICWP initial</h2><p>First nursing assessment for the Independent Care Waiver Program.</p></a>' +
-        '<a class="card" href="/assessment.html?program=icwp&visit=bimonthly"><h2>ICWP bi-monthly</h2><p>Follow-up nursing assessment for an ICWP client.</p></a>' +
-        '<a class="card" href="/supervisory.html"><h2>CCSP supervisory visit</h2><p>RN supervisory visit and progress notes.</p></a></div>';
+        '<a class="card" href="/assessment.html?program=icwp&visit=bimonthly"><h2>ICWP RN supervisory visit notes</h2><p>The follow-up nursing assessment for an ICWP client.</p></a>' +
+        '<a class="card" href="/supervisory.html"><h2>CCSP RN supervisory visit notes</h2><p>Supervisory visit and progress notes, including the care coordinator communication.</p></a></div>';
       return;
     }
     const formId = "assessment-" + program + "-" + (visit === "bimonthly" ? "bimonthly" : "initial");

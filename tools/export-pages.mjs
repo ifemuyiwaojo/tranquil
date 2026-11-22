@@ -16,10 +16,6 @@ function rewrite(text, file) {
   if (file === "robots.txt") {
     next = next.replaceAll("Disallow: /", "Disallow: " + prefix + "/");
   }
-  if (file.endsWith(".html")) {
-    const banner = '<div class="wrap"><p class="notice">This is a preview of the website. Please look through every page and make notes on what needs to change. This copy does not save form submissions.</p></div>';
-    next = next.replace("</header>", "</header>\n" + banner);
-  }
   return next;
 }
 
